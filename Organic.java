@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Organic extends Waste implements Recycable{
+public class Organic extends Waste {
 
     private boolean isCompostable;
     private String type;
@@ -10,7 +10,7 @@ public class Organic extends Waste implements Recycable{
     
     //constructors
 
-    Organic(boolean isCompostable, String type ){
+    Organic(String type, boolean isCompostable ){
         super(types.ORGANIC);
         this.type = type;
         this.isCompostable = isCompostable;
@@ -43,9 +43,12 @@ public class Organic extends Waste implements Recycable{
 
     @Override
 
-    public boolean isRecycable(){
-        return true;
+    public String toString(){
+        return "ORGANIC WASTE"+
+                "\nType: " + type +
+                "\nIs Compostable: " + isCompostable;
     }
+
 
     
 
